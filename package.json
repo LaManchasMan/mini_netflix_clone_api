@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db:run": "psql -f my.sql musicdb",
+    "db:create": "creetedb mini_netflix_clone_apidb",
+    "db:destroy": "dropdb mini_netflix_clone_apidb",
+    "db:init": "psql -f schema.sqql mini_netflix_clone_apidb",
+    "db:seed": "psql -f seed.sql mini_netflix_clone_apidb",
+    "db:reset": "npm rn db: destroy; npm run db: create && npm run db:init && npm run db:seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "", 
   "license": "ISC"
 }
