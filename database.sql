@@ -3,15 +3,11 @@ CREATE DATABASE Netflix;
 CREATE TABLE  users(
     id SERIAL PRIMARY KEY,
     name varchar(50) not null,
-    email varchar(50) not null
+    email varchar(50) not null,
+    password varchar(50) not null
 );
  
- INSERT INTO users 
-        (name, email)
-    VALUES ('enoch', 'hoseaemail@gmail.com');
 
-ALTER TABLE users
-ADD password varchar(50);
 
 INSERT INTO users 
         (name, email, password)
@@ -33,4 +29,6 @@ INSERT INTO category
             ('Attack on Titans', 'Inside Man', 'Curon'),
             ('Demon slayer', 'The Bourne Ultimation', 'The Hundred'),
             ('Trigun', 'Below Zero', 'Lost Girls');
+            
+
             
